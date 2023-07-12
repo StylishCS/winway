@@ -1,12 +1,8 @@
-// var express = require('express');
-// var router = express.Router();
-// const {getLogin, checkLogin} = require('../controllers/loginController');
+var express = require('express');
+var router = express.Router();
+const {login} = require('../controllers/loginController');
+const {validate} = require('../validation/login_validation');
 
+router.post('/', validate(), login);
 
-
-// router.get('/', getLogin);
-// router.post('/', checkLogin);
-
-
-
-// module.exports = router;
+module.exports = router;
