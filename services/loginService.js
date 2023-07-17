@@ -3,7 +3,6 @@ const util = require('util');
 const bcrypt = require('bcrypt');
 
 async function getUser(email,password){
-    console.log('flag');
     try {
         const query = util.promisify(connection.query).bind(connection);
         const getUser = await query("select * from users where email = ?", [email]);
