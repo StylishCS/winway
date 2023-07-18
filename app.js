@@ -16,6 +16,8 @@ const courseRouter = require('./routes/coursesRoutes');
 const auth = require('./routes/auth');
 const facebookAuth = require('./routes/facebookAuth');
 
+const {protect} = require('./middleware/protect');
+
 var app = express();
 
 
